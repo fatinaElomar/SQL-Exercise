@@ -8,7 +8,7 @@ Answer:
 SELECT name FROM students 
 WHERE Age > 30;
 
-  git 
+
 Problem 3. Get the names of the females who are 30 years old
 Answer: 
 SELECT name FROM students

@@ -82,3 +82,34 @@ select companies.Name
 FROM companies INNER join employees on employees.Company=companies.Name
 WHERE Role="Graphic Designer";
 
+17-commit
+
+problem 18.Find the person with the highest number of points in students
+Answer:
+SELECT Name FROM STUDENTS 
+WHERE Points=(SELECT max(points) FROM students);
+
+
+problem 19.Find the average of points in students
+Answer:
+SELECT avg ("Points") FROM students;
+
+
+problem 20.Find the number of students that have 500 points
+Answer:
+SELECT count(ID) FROM students 
+WHERE Points="500";
+
+
+problem 21.Find the names of students that contains 's'
+Answer:
+SELECT name FROM students 
+WHERE name like "%s%";
+
+
+problem 22.Find all students based on the decreasing order of their points
+Answer:
+SELECT * FROM students 
+ORDER BY Points DESC;
+ 
+ 23-commit

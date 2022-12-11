@@ -27,6 +27,7 @@ INSERT INTO students (name, Age, Gender,Points)
 VALUES ("Fatina", "26", "f","300"); 
 
 
+
 Problem  6. Increase the points of Basma because she solved a new exercise.
 Answer: 
 UPDATE students
@@ -39,3 +40,24 @@ Answer:
 UPDATE students
 SET  Points='50'
 WHERE name ="Alex";
+
+8-update answers
+9-commit
+
+Problem 10. Copy Layal data from students to graduates.
+Answer: 
+INSERT INTO graduates
+(id , name, Age , Gender,Points)
+SELECT * FROM students 
+WHERE name="Layal";
+
+Problem 11. :Add the graduation date previously mentioned to Layal record in graduates
+Answer: 
+UPDATE graduates
+SET Graduation ="08/09/2018"
+WHERE name ="Layal";
+
+Problem 12. Remove Layal record from students
+Answer: 
+ DELETE FROM students WHERE name='Layal'; 
+

@@ -59,5 +59,26 @@ WHERE name ="Layal";
 
 Problem 12. Remove Layal record from students
 Answer: 
- DELETE FROM students WHERE name='Layal'; 
+DELETE FROM students WHERE name='Layal'; 
+
+
+
+Problem 14. Produce a table that contains, for each employee, his/her name, company name, and company date.
+Answer:
+select employees.Name ,employees.Company , companies.date
+from employees , companies 
+WHERE employees.Company=companies.name;
+
+problem 15. Find the name of employees that work in companies made before 2000.
+Answer:
+SELECT employees.name 
+FROM employees INNER JOIN companies ON employees.Company=companies.Name
+WHERE companies.Date<"2000";
+
+
+problem 16.Find the name of company that has a graphic designer.
+Answer:
+select companies.Name 
+FROM companies INNER join employees on employees.Company=companies.Name
+WHERE Role="Graphic Designer";
 
